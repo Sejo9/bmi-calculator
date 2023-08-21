@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Semibold";
+    src: url(./assets/fonts/static/Inter-SemiBold.ttf);
+}
+
+:root {
+    --blue: #345FF6;
+    --gunmetal: #253347;
+    --darkElectricBlue: #5E6E85;
+    --borders: #D8E2E7;
+    --white: #FFFFFF;
+    --gradient: #D6E6FE;
+}
+
+/* Typograph */
+.heading-xl {
+    font-family: Inter-Semibold;
+    font-size: 64px;
+    line-height: 110%;
+}
+
+.heading-l {
+    font-family: Inter-Semibold;
+    font-size: 48px;
+    line-height: 110%;
+}
+
+.heading-m {
+    font-family: Inter-Semibold;
+    font-size: 24px;
+    line-height: 110%;
+}
+
+.heading-s {
+    font-family: Inter-Semibold;
+    font-size: 20px;
+    line-height: 110%;
+}
+
+.body-m {
+    font-family: Inter-Regular;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.body-m-bold {
+    font-family: Inter-Semibold;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.body-s {
+    font-family: Inter-Regular;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+/* Elements */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--gunmetal);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Layout */
+main {
+    padding: 0 10px 30px 10px;
+}
+
+#topper {
+    display: flex;
+    padding: 0 3vw;
+}
+
+#others {
+    padding: 0 3vw;
+}
+
+#intro {
+    width: 70%;
+    background: linear-gradient(to right, #fff, #D6E6FE);
+    border-radius: 0 0 10px 0;
+}
+
+#intro > h1{
+    width: 60%;
+}
+
+#intro> img {
+    margin-top: 50px;
+}
+
+#intro>p {
+    width: 60%;
+    text-align: justify;
+    margin-bottom: 10vw;
+}
+
+#calculator {
+    position: absolute;
+    width: 40%;
+    top: 15%;
+    right: 3vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 10px 10px 5px var(--borders);
+}
+
+#units {
+    display: flex;
+    justify-content: space-between;
+}
+
+#units>div {
+    width: 47.5%;
+}
+
+#units>div>label {
+    color: var(--gunmetal);
+}
+
+#metric-display {
+    display: flex;
+    flex-direction: column;
+}
+
+#metric-headers {
+    display: flex;
+    justify-content: space-between;
+}
+
+#metric-headers>p {
+    width: 47.5%;
+    color: #5E6E85;
+}
+
+#metric-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calc-input {
+    width: 47.5%;
+    display: flex;
+    border: 1px solid var(--borders);
+    border-radius: 10px;
+}
+
+.calc-input-active {
+    border: 1px solid var(--blue);
+}
+
+.calc-input>input {
+    width: 60%;
+    border-radius: 10px;
+    margin-left: 20px;
+    color: var(--gunmetal);
+}
+
+.calc-input>p {
+    width: auto;
+    margin-left: 4px;
+    margin-right: 20px;
+    color: var(--blue);
+}
+
+#imperial-display {
+    display: none;
+    flex-direction: column;
+}
+
+#imperial-display>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.imp-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+#welcome {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px 100px 100px 5px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#result{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px 100px 100px 5px;
+    padding: 20px;
+    display: none;
+    margin-top: 30px;
+    align-items: center;
+}
+
+#result-score {
+    width: 47.5%;
+    padding-left: 10px;
+    margin-right: 5%;
+}
+
+#result-score>p{
+    margin: 0;
+}
+
+#result-details{
+    width: 40%;
+}

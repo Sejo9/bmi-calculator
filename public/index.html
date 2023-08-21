@@ -1,27 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
-    <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
-  </head>
-  <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Frontend Mentor | Body Mass Index Calculator</title>
+</head>
+
+<body>
+  <main>
+    <section id="topper">
+      <section id="intro">
+        <img src="./assets/images/logo.svg">
+        <h1 class="heading-xl">Body Mass Index Calculator</h1>
+        <p class="body-m">
+          Better understand your weight in relation to your height using our
+          body mass index (BM) calculator. While BMI is not the sole determinant
+          of a healthy weight, it offers a valuable starting point to evaluate
+          your overall health and well-being.
+        </p>
+      </section>
+
+
+
+      <section id="calculator">
+        <h3 class="heading-m">
+          Enter your details below
+        </h3>
+
+        <div id="units">
+          <div>
+            <input name="unit" id="metric" type="radio" checked>
+            <label class="body-m-bold" for="metric">Metric</label>
+          </div>
+
+          <div>
+            <input name="unit" id="imperial" type="radio">
+            <label class="body-m-bold" for="imperial">Imperial</label>
+          </div>
+        </div>
+
+        <div id="metric-display">
+          <div id="metric-headers">
+            <p class="body-s">Height</p>
+            <p class="body-s">Weight</p>
+          </div>
+
+          <div id="metric-fields">
+            <div class="calc-input">
+              <input id="cm" class="heading-m" type="number" min="0" placeholder="0" />
+              <p class="heading-m">cm</p>
+            </div>
+
+            <div class="calc-input">
+              <input class="heading-m" id="kg" type="number" min="0" placeholder="0" />
+              <p class="heading-m">kg</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="imperial-display">
+          <div>
+            <p class="body-s" style="color: #5E6E85;">Height</p>
+
+            <div class="imp-section">
+              <div class="calc-input">
+                <input id="ft" class="heading-m" type="number" min="0" placeholder="0"/>
+                <p class="heading-m">ft</p>
+              </div>
+
+              <div class="calc-input">
+                <input id="in" class="heading-m" type="number" min="0" placeholder="0"/>
+                <p class="heading-m">in</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div>
+            <p class="body-s" style="color: #5E6E85;">Weight</p>
+
+            <div class="imp-section">
+              <div class="calc-input">
+                <input id="st" class="heading-m" type="number" min="0" placeholder="0" />
+                <p class="heading-m">st</p>
+              </div>
+
+              <div class="calc-input">
+                <input id="lbs" class="heading-m" type="number" min="0" placeholder="0" />
+                <p class="heading-m">lbs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="welcome">
+          <p class="heading-m">Welcome!</p>
+          <p class="body-s">Enter your height and weight and you’ll see your BMI result here</p>
+        </div>
+
+        <div id="result">
+          <div id="result-score">
+            <p class="body-m-bold">Your BMI is...</p>
+            <p id="score" class="heading-xl">23.5</p>
+          </div>
+
+          <div id="result-details">
+            <p id="result-text" class="body-s">
+              Your BMI suggests you’re a healthy weight. Your ideal weight is between <strong>63.3kgs - 85.2kgs</strong>.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+    </section>
+
+
+    <section id="others">
+      <section id="what">
+        <h2 class="heading-l">What your BMI result means</h2>
+        <p class="body-m">
+          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a
+          healthy weight may lower your chances of experiencing health issues later on,
+          such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced
+          fat and sugar content, incorporating ample fruits and vegetables. Additionally,
+          strive for regular physical activity, ideally about 30 minutes daily for
+          five days a week.
+        </p>
+      </section>
+
+      <section id="tips">
+        <div>
+          <h3 class="heading-m">Healthy eating</h3>
+          <p class="body-m">
+            Healthy eating promotes weight control, disease prevention, better digestion,
+            immunity, mental clarity, and mood.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="heading-m">Regular exercise</h3>
+          <p>
+            Exercise improves fitness, aids weight control, elevates mood, and reduces disease
+            risk, fostering wellness and longevity.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="heading-m">Adequate sleep</h3>
+          <p class="body-m">
+            Sleep enhances mental clarity, emotional stability, and physical wellness, promoting
+            overall restoration and rejuvenation.
+          </p>
+        </div>
+      </section>
+
+      <section id="limitations">
+        <div>
+          <h2 class="heading-l">Limitations of BMI</h2>
+          <p class="body-m">
+            Although BMI is often a practical indicator of healthy weight, it is not suited for
+            every person. Specific groups should carefully consider their BMI outcomes, and in
+            certain cases, the measurement may not be beneficial to use.
+          </p>
+        </div>
+
+
+        <div>
+          <h4 class="heading-s">Gender</h4>
+          <p class="body-m">
+            The development and body fat composition of girls and boys vary with age. Consequently,
+            a child's age and gender are considered when evaluating their BMI.
+          </p>
+        </div>
+
+
+        <div>
+          <h4 class="heading-s">Age</h4>
+          <p class="body-m">
+            In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
+            body fat content.
+          </p>
+        </div>
+
+
+        <div>
+          <h4 class="heading-s">Muscle</h4>
+          <p class="body-m">
+            BMI may misclassify muscular individuals as overweight or obese, as it doesn't
+            differentiate muscle from fat.
+          </p>
+        </div>
+
+
+        <div>
+          <h4 class="heading-s">Pregnancy</h4>
+          <p class="body-m">
+            Expectant mothers experience weight gain due to their growing baby. Maintaining a
+            healthy pre-pregnancy BMI is advisable to minimise health risks for both mother
+            and child.
+          </p>
+        </div>
+
+
+        <div>
+          <h4 class="heading-s">Race</h4>
+          <p class="body-m">
+            Certain health concerns may affect individuals of some Black and Asian origins at
+            lower BMIs than others. To learn more, it is advised to discuss this with your
+            GP or practice nurse.
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="./dist/index.js"></script>
+</body>
+
 </html>
