@@ -1,4 +1,4 @@
-# New Project
+# BMI Calculator
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
