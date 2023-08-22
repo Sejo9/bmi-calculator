@@ -78,6 +78,39 @@ input {
     border-style: none;
     border-color: transparent;
     outline: none;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    height: 31px;
+    width: 31px;
+    margin-right: 10px;
+}
+
+.custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 1px solid var(--borders);
+    
+}
+
+.custom-radio:hover{
+    outline-color: var(--blue);
+}
+
+.custom-radio:focus-visible {
+    outline-offset: 0;
+}
+
+.custom-radio:checked{
+    border: 7px solid var(--borders);
+    background-color: var(--blue);
+}
+
+.custom-radio:checked:hover{
+    outline-color: var(--borders);
 }
 
 input::-webkit-outer-spin-button,
@@ -141,10 +174,13 @@ main {
 
 #units>div {
     width: 47.5%;
+    display: flex;
+    align-items: center;
 }
 
 #units>div>label {
     color: var(--gunmetal);
+    cursor: pointer;
 }
 
 #metric-display {
