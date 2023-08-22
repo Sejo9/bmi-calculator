@@ -92,12 +92,12 @@ input[type="radio"] {
     -webkit-appearance: none;
     background-color: var(--white);
     border-radius: 50%;
-    outline: 1px solid var(--borders);
-    
+    /* outline: 1px solid var(--borders); */
+    box-shadow: 0 0 0 1px var(--borders);
 }
 
 .custom-radio:hover{
-    outline-color: var(--blue);
+    box-shadow: 0 0 0 1px var(--blue);
 }
 
 .custom-radio:focus-visible {
@@ -110,7 +110,7 @@ input[type="radio"] {
 }
 
 .custom-radio:checked:hover{
-    outline-color: var(--borders);
+    box-shadow: 0 0 0 1px var(--borders);
 }
 
 input::-webkit-outer-spin-button,
